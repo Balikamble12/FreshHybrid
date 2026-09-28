@@ -1,0 +1,38 @@
+package Test_Runner;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import PageObjectModule.Leave_page;
+import PageObjectModule.Login_page;
+import Utility.Baseclass;
+
+public class Leave_runner extends Baseclass {
+	
+	
+	Leave_page lm;
+	
+	@BeforeMethod
+
+	public void driverinit() {
+		lm=new Leave_page(driver);
+	}
+	@Test
+
+	public void Leave_functionlity() throws InterruptedException {
+		
+	lm.UserClickOnLeave();
+	lm.userSelectStartLeaveDate();
+	lm.userSelectEndLeaveDate();
+	lm.ValidateOfPendingApprovalcheckbox();
+	lm.clickOnRejectedStatus();
+	lm.UserSelectLeaveEmpName();
+	lm.ClickOnPastEmployees();
+	}
+	
+	
+	
+	
+}

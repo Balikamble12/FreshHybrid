@@ -1,0 +1,35 @@
+package AppUtils;
+
+import java.io.FileInputStream;
+import java.util.List;
+import java.util.Properties;
+
+
+public class pp {
+ public static int count=30;
+ 
+ public void display() {
+	 count=20;
+ }
+	
+	public static void show() {
+		count=10;
+		System.out.println(count);
+	}
+
+	public pp(){
+		count =5;
+		System.out.println(count);
+	}
+	
+	public static void main(String[]args) {
+		pp obj= new pp();
+		obj.display();
+		pp.show();
+		
+		
+	} 
+	
+		
+	}
+

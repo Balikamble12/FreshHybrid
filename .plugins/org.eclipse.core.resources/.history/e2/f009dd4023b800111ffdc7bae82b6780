@@ -1,0 +1,43 @@
+package AppUtils;
+
+import java.io.FileInputStream;
+import java.util.List;
+
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class pp {
+	
+public static WebDriver driver;
+
+	public static String getExceldata() {
+		
+try {		FileInputStream fis= new FileInputStream(":c/");
+		Workbook wb= new XSSFWorkbook();
+		Sheet xlsheet= wb.getSheet("demo");
+		Row rownum= xlsheet.getRow(3);
+		Cell cellcount= rownum.getCell(2);
+		String cell= cellcount.getStringCellValue();
+		return cell;
+		}catch(Exception e) {
+			e.getMessage();
+			return null;
+		}
+		
+
+	
+	}
+		
+		
+		
+		
+	
+		
+			}

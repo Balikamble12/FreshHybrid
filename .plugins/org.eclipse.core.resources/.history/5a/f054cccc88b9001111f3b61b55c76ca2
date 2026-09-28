@@ -1,0 +1,27 @@
+package AppUtils;
+
+import java.io.FileInputStream;
+import java.util.List;
+import java.util.Properties;
+
+//1- Write a program to palindrome a string./ reverse a string
+public class pp {
+ 
+	 public static void main(String[] args) {
+	String name= "sulbha is great";
+	String[] y= name.split(" ");
+	String x= "";
+	for (int i=y.length-1; i>=0; i--)
+	{
+	x= x+y[i];
+	}
+	
+	System.out.println(x);
+	
+	
+	
+	
+}
+	
+	}
+
